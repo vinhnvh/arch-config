@@ -1,4 +1,16 @@
 binds {
+    //================================================KEYBINDINGS================================================
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    //================================================APPS-LAUNCHER================================================
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+T hotkey-overlay-title="Open a Popup-Terminal: kitty" { spawn "kitty" "--class" "kitty-popup"; }
+    Mod+A hotkey-overlay-title="Run an Application: launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Z hotkey-overlay-title="Run an Application: zed" { spawn "zeditor"; }
+    Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Mod+D hotkey-overlay-title="Run an Application: nautilus" { spawn "nautilus"; }
+
     //================================================NOCTALIA-SHELL================================================
     // Audio Management
     XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
@@ -12,8 +24,6 @@ binds {
     // Display & Brightness
     XF86MonBrightnessUp allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
-
-
 
     //================================================EQUIBOP================================================
     Mod+MouseForward { spawn "equibop" "--toggle-mic"; }

@@ -3,13 +3,13 @@ description: Gaming Laptop
 import: []
 enabled_modules:
 - login-managers/sddm-cat-enable
-- windowss-managers/niriWM
 - quickshells/noctalia-shell
 - system-packages-sazv-arch
 - ManyApps/Fcitx5-Lotus-enable
 - ManyApps/apps-and-tools
 - ManyApps/controller
 - ManyApps/Gaming
+- windows-managers/niriWM
 packages:
 - snapper
 exclude: []
