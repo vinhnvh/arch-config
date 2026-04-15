@@ -1,8 +1,5 @@
 local packages = {
     "sddm",
-    "unzip",
-    "qt6-svg",
-    "qt6-declarative",
     "qt5-quickcontrols2",
 }
 

@@ -35,7 +35,6 @@ packages:
 - f2fs-tools
 - git
 - gst-libav
-- gst-plugin-pipewire
 - gst-plugins-bad
 - gst-plugins-ugly
 - haveged
@@ -88,9 +87,6 @@ packages:
 - pacman-contrib
 - pavucontrol
 - perl
-- pipewire-alsa
-- pipewire-jack
-- pipewire-pulse
 - pkgfile
 - plocate
 - poppler-glib
@@ -120,7 +116,6 @@ packages:
 - which
 - whois
 - wireless-regdb
-- wireplumber
 - xdg-user-dirs
 - xdg-utils
 - xf86-input-libinput

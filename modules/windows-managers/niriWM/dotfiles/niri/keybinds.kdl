@@ -20,6 +20,9 @@ binds {
 
     // Media Controls
     XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
+    XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "pause"; }
+    XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
 
     // Display & Brightness
     XF86MonBrightnessUp allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }

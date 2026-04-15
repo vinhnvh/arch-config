@@ -2,7 +2,6 @@ host: sazv-arch
 description: Gaming Laptop
 import: []
 enabled_modules:
-- login-managers/sddm-cat-enable
 - quickshells/noctalia-shell
 - system-packages-sazv-arch
 - ManyApps/Fcitx5-Lotus-enable
@@ -10,6 +9,8 @@ enabled_modules:
 - ManyApps/controller
 - ManyApps/Gaming
 - windows-managers/niriWM
+- windows-managers/hyprlandWM
+- ManyApps/audio
 packages:
 - snapper
 exclude: []

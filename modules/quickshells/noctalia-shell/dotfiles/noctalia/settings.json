@@ -23,7 +23,9 @@
             "discord",
             "steam",
             "tlauncher",
-            "net.lutris.Lutris"
+            "net.lutris.Lutris",
+            "heroic",
+            "equibop"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -305,7 +307,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "tonal-spot",
+        "generationMethod": "fruit-salad",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
@@ -400,7 +402,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "attached",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
@@ -505,7 +507,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,

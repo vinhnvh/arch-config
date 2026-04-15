@@ -8,7 +8,8 @@ local packages = {
     "ddcutil",
     "evolution-data-server",
     "python",
-
+    "qt6-declarative",
+    "qt6-svg",
     -- Build dependencies for Niri and related tools
     "cmake",
     "git",
