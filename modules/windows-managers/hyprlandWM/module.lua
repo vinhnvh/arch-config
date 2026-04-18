@@ -3,7 +3,7 @@ local packages = {
     "hyprland",
     "xdg-desktop-portal-hyprland",
 
-    -- Build dependencies for Niri and related tools
+    -- Build dependencies for Hyprland and related tools
     "cmake",
     "git",
 

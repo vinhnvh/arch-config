@@ -9,8 +9,8 @@ enabled_modules:
 - ManyApps/controller
 - ManyApps/Gaming
 - windows-managers/niriWM
-- windows-managers/hyprlandWM
 - ManyApps/audio
+- windows-managers/mangowm
 packages:
 - snapper
 exclude: []

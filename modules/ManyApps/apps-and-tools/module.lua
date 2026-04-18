@@ -2,7 +2,6 @@ local packages = {
     "brave-bin",
     "zed",
     "sbctl",
-    "starship",
 }
 
 return {

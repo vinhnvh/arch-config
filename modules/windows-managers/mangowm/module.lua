@@ -1,8 +1,9 @@
 local packages = {
     -- Niri window manager
     "mangowm-git",
+    "xdg-desktop-portal-wlr",
 
-    -- Build dependencies for Niri and related tools
+    -- Build dependencies for Mango and related tools
     "cmake",
     "git",
 
@@ -18,6 +19,6 @@ local packages = {
 return {
     description = "Hyprland Wayland compositor with defaults",
     conflicts = {},
-    dotfiles_sync = false,
+    dotfiles_sync = true,
     packages = packages,
 }

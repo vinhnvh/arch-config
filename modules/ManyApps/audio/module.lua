@@ -4,7 +4,12 @@ local packages = {
     "pipewire-pulse",
     "gst-plugin-pipewire",
     "wireplumber",
-    "pipewire-v4l2"
+
+    -- Trình phát nhạc
+    "mpd",
+    "mpc",
+    "rmpc",
+
 }
 
 return {

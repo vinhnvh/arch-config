@@ -12,6 +12,7 @@ local packages = {
     "kitty",
     "fastfetch",
     "fish",
+    "starship",
 
     -- Fonts --
     "maple-mono-nf-cn-unhinted",

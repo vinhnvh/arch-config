@@ -4,6 +4,8 @@ local packages = {
     "lutris",
     "heroic-games-launcher-bin",
     "protonplus",
+    "discord",
+    "gamemode",
 }
 
 return {
