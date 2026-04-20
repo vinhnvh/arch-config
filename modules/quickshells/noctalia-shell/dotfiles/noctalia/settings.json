@@ -180,20 +180,11 @@
                     "id": "plugin:simple-notes"
                 },
                 {
-                    "compactMode": false,
-                    "hideMode": "transparent",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
+                    "defaultSettings": {
+                        "monitorOrder": [
+                        ]
+                    },
+                    "id": "plugin:mangowc-layout-switcher"
                 },
                 {
                     "characterCount": 2,
@@ -278,9 +269,6 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
-                },
-                {
-                    "id": "plugin:mangowc-layout-switcher"
                 }
             ]
         }

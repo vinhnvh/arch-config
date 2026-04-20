@@ -7,7 +7,7 @@ EXTERNAL_PATH="/sys/class/drm/card*-DP-*/status"
 
 # --- CHỐNG CHẠY ĐÈ (SINGLETON) ---
 # Nếu script đã chạy rồi thì bản mới sẽ tự thoát
-LOCKFILE="/tmp/niri-auto-display.lock"
+LOCKFILE="/tmp/auto-display.lock"
 if [ -e ${LOCKFILE} ] && kill -0 $(cat ${LOCKFILE}) 2>/dev/null; then
     exit
 fi
