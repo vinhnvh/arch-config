@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export GLFW_IM_MODULE:fcitx
+SETUVAR --export GLFW_IM_MODULE:ibus
 SETUVAR --export GTK_IM_MODULE:fcitx
 SETUVAR --export QT_IM_MODULE:fcitx
 SETUVAR --export QT_IM_MODULES:fcitx

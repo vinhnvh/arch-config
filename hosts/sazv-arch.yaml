@@ -11,6 +11,7 @@ enabled_modules:
 - windows-managers/niriWM
 - ManyApps/audio
 - windows-managers/mangowm
+- windows-managers/hyprlandWM
 packages:
 - snapper
 exclude: []

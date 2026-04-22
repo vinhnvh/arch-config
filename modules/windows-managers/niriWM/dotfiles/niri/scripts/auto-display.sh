@@ -2,6 +2,7 @@
 
 # --- CẤU HÌNH ---
 LAPTOP="eDP-1"
+LAPTOP2="eDP-2"
 # Script tự động tìm các cổng DP-1, DP-2, DP-3... bất kể bạn dùng Hybrid hay Discrete GPU
 EXTERNAL_PATH="/sys/class/drm/card*-DP-*/status"
 
@@ -22,9 +23,11 @@ apply_logic() {
     if grep -q "^connected" $EXTERNAL_PATH 2>/dev/null; then
         # Có màn hình rời -> Tắt màn hình laptop
         niri msg output "$LAPTOP" off
+        niri msg output "$LAPTOP2" off
     else
         # Không có màn hình rời -> Bật màn hình laptop
         niri msg output "$LAPTOP" on
+        niri msg output "$LAPTOP2" on
     fi
 }
 
