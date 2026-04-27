@@ -2,7 +2,6 @@ host: sazv-arch
 description: Gaming Laptop
 import: []
 enabled_modules:
-- quickshells/noctalia-shell
 - system-packages-sazv-arch
 - ManyApps/Fcitx5-Lotus-enable
 - ManyApps/apps-and-tools
@@ -12,6 +11,8 @@ enabled_modules:
 - ManyApps/audio
 - windows-managers/mangowm
 - windows-managers/hyprlandWM
+- Shells/noctalia-shell
+- Shells/Rice
 packages:
 - snapper
 exclude: []
@@ -43,10 +44,10 @@ update_hooks:
   run_as_user: false
 default_apps:
   scope: system
-  browser: null
+  browser: brave-browser
   text_editor: null
   file_manager: null
-  terminal: null
+  terminal: kitty
   video_player: null
   audio_player: null
   image_viewer: null

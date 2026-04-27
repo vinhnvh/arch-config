@@ -5,6 +5,7 @@ local packages = {
     "heroic-games-launcher-bin",
     "protonplus",
     "gamemode",
+    "rhythia-bin",
 }
 
 return {

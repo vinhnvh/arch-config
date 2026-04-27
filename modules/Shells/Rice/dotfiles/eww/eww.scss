@@ -1,0 +1,82 @@
+@import "colors.scss";
+
+*{
+  all: unset;
+  font-family: "Iosevka";
+  font-weight: bold;
+}
+
+@import "scss/bar.scss";
+@import "scss/side-bar.scss";
+@import "scss/wallpaper.scss";
+@import "scss/device-control.scss";
+@import "scss/resource-monitor.scss";
+@import "scss/notification.scss";
+@import "scss/custom-calendar.scss";
+@import "scss/music-control.scss";
+
+* {
+  all: unset;
+}
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-left: 2px solid #3c3c3c;
+  padding: 30px 15px;
+}
+
+/* Phần user */
+.user-section {
+  margin-bottom: 20px;
+}
+.username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.hostname {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+/* Đồng hồ */
+.clock-section {
+  margin: 20px 0;
+}
+.time-large {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.time-small {
+  font-size: 32px;
+  color: #cccccc;
+}
+
+/* Ngày tháng */
+.date {
+  font-size: 16px;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+/* Separator */
+.separator {
+  background-color: #555555;
+  margin: 10px 0;
+}
+
+/* Các nút hành động */
+.actions {
+  margin-top: 20px;
+}
+.action-btn {
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  color: #ffffff;
+}
+.action-btn:hover {
+  background-color: #4a4a4a;
+}
