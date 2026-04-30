@@ -16,6 +16,9 @@ local packages = {
 
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
+
+    -- Mouse cursor themes
+    "bibata-cursor-theme",
 }
 
 return {

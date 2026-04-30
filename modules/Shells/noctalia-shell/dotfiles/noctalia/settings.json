@@ -121,41 +121,6 @@
                     "useDistroLogo": false
                 },
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "generalTooltipText": "",
-                    "hideMode": "alwaysExpanded",
-                    "icon": "heart",
-                    "iconPosition": "left",
-                    "id": "CustomButton",
-                    "ipcIdentifier": "",
-                    "leftClickExec": "qs -c noctalia-shell ipc call launcher clipboard",
-                    "leftClickUpdateText": true,
-                    "maxTextLength": {
-                        "horizontal": 10,
-                        "vertical": 10
-                    },
-                    "middleClickExec": "",
-                    "middleClickUpdateText": false,
-                    "parseJson": false,
-                    "rightClickExec": "",
-                    "rightClickUpdateText": false,
-                    "showExecTooltip": false,
-                    "showIcon": true,
-                    "showTextTooltip": false,
-                    "textCollapse": "",
-                    "textCommand": "",
-                    "textIntervalMs": 3000,
-                    "textStream": false,
-                    "wheelDownExec": "",
-                    "wheelDownUpdateText": false,
-                    "wheelExec": "",
-                    "wheelMode": "unified",
-                    "wheelUpExec": "",
-                    "wheelUpUpdateText": false,
-                    "wheelUpdateText": false
-                },
-                {
                     "defaultSettings": {
                         "autoPaste": false,
                         "autoPasteDelay": 300,
@@ -220,9 +185,7 @@
                         "ytPlayerClient": "android"
                     },
                     "id": "plugin:music-search"
-                }
-            ],
-            "right": [
+                },
                 {
                     "clockColor": "none",
                     "customFont": "",
@@ -231,7 +194,9 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
+                }
+            ],
+            "right": [
                 {
                     "blacklist": [
                     ],
