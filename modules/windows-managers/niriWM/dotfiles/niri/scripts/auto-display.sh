@@ -37,7 +37,6 @@ apply_logic
 # 2. LẮNG NGHE SỰ KIỆN (Không dùng vòng lặp polling)
 # Sử dụng Process Substitution (< <) để giảm thiểu số lượng tiến trình con
 while read -r line; do
-    # Niri trên máy bạn không bắn sự kiện Output, nên ta bám vào Workspace changed
     if echo "$line" | grep -q "Workspaces changed"; then
         apply_logic
     fi
