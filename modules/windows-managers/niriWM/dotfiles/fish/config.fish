@@ -12,3 +12,12 @@ if status is-login
     set -Ux SDL_IM_MODULE fcitx
     set -Ux GLFW_IM_MODULE ibus
 end
+function fish_greeting
+    set_color cyan # Thêm màu cho mèo nếu muốn
+    printf "\n"
+    printf "      |\\      _,,,---,,_ \n"
+    printf "ZZZzz /,`.-'`'    -.  ;-;;,_\n"
+    printf "     |,4-  ) )-,_. ,\\ (  `'-'\n"
+    printf "    '---''(_/--'  `-'\\_)  \n"
+    set_color normal
+end

@@ -3,7 +3,6 @@ local packages = {
     "zed",
     "sbctl",
     "anydesk-bin",
-    "teamviewer",
     "brave-origin-nightly-bin",
 }
 

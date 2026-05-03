@@ -12,7 +12,8 @@ binds {
     //================================================NOCTALIA-SHELL================================================
     // Menu + Launcher
     Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
-    Mod+A hotkey-overlay-title="Run an Application: launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+A hotkey-overlay-title="Run the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Alt+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 
     // Audio Management
     XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }

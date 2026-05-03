@@ -2,3 +2,24 @@ cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 12
 }
+// Make the backdrop light.
+/-overview {
+    backdrop-color "#777777"
+}
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+// Set transparent workspace background color so you see the backdrop at all times.
+layout {
+  background-color "transparent"
+}
+
+// Optionally, disable the workspace shadows in the overview.
+overview {
+  workspace-shadow {
+    on
+  }
+}
