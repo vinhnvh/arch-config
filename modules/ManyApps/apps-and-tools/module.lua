@@ -4,6 +4,9 @@ local packages = {
     "sbctl",
     "anydesk-bin",
     "brave-origin-nightly-bin",
+    "yazi",
+    "neovim",
+    "zen-browser-bin",
 }
 
 return {

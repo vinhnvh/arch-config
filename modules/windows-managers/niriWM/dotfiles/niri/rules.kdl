@@ -1,0 +1,25 @@
+window-rule {
+    match app-id="org-tlauncher-tlauncher-rmo-TLauncher"
+    open-floating true
+    default-floating-position x=10 y=0 relative-to="top"
+}
+window-rule {
+    match app-id=r#"kitty-popup"#
+    open-floating true
+        default-window-height { proportion 0.3; }
+        default-column-width { proportion 0.3; }
+}
+
+window-rule {
+    geometry-corner-radius 14
+    clip-to-geometry true
+    draw-border-with-background false
+    background-effect{
+        blur true
+    }
+}
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}

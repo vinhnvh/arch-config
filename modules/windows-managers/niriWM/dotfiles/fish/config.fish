@@ -3,7 +3,7 @@ if status is-interactive
 set -g fish_greeting ""
 starship init fish | source
 # fastfetch -c ~/.config/fastfetch/themes/config.jsonc
-
+set -gx EDITOR nvim
 end
 if status is-login
     set -Ux GTK_IM_MODULE fcitx

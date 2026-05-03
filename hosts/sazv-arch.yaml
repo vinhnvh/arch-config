@@ -45,8 +45,8 @@ update_hooks:
 default_apps:
   scope: system
   browser: brave-browser
-  text_editor: null
-  file_manager: null
+  text_editor: nvim
+  file_manager: yazi
   terminal: kitty
   video_player: null
   audio_player: null

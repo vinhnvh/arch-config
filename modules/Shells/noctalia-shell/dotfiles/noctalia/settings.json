@@ -699,6 +699,18 @@
             {
                 "enabled": true,
                 "id": "starship"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
             }
         ],
         "enableUserTheming": false
