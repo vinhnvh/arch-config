@@ -12,7 +12,6 @@ enabled_modules:
 - windows-managers/mangowm
 - windows-managers/hyprlandWM
 - Shells/noctalia-shell
-- Shells/Rice
 - ManyApps/VM
 packages:
 - snapper
