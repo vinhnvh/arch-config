@@ -15,3 +15,7 @@
 #input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
 #output_path = "/home/sazv/.cache/noctalia/placeholder.json"
 
+[templates.nvim-base16]
+input_path = "~/.config/arch-config/modules/ManyApps/Must-have/dotfiles/nvim/lua/config/matugen-template.lua"
+output_path = "~/.config/arch-config/modules/ManyApps/Must-have/dotfiles/nvim/lua/config/matugen.lua"
+post_hook = 'pkill -SIGUSR1 nvim'

@@ -4,7 +4,6 @@ import: []
 enabled_modules:
 - system-packages-sazv-arch
 - ManyApps/Fcitx5-Lotus-enable
-- ManyApps/apps-and-tools
 - ManyApps/controller
 - ManyApps/Gaming
 - windows-managers/niriWM
@@ -12,7 +11,8 @@ enabled_modules:
 - windows-managers/mangowm
 - windows-managers/hyprlandWM
 - Shells/noctalia-shell
-- ManyApps/VM
+- ManyApps/apps-and-tools
+- ManyApps/Must-have
 packages:
 - snapper
 exclude: []
@@ -44,7 +44,7 @@ update_hooks:
   run_as_user: false
 default_apps:
   scope: system
-  browser: brave-browser
+  browser: brave-origin-nightly
   text_editor: nvim
   file_manager: yazi
   terminal: kitty

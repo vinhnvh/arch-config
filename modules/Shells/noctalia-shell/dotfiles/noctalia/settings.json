@@ -713,7 +713,7 @@
                 "id": "zenBrowser"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -730,7 +730,7 @@
         "translucentWidgets": false
     },
     "wallpaper": {
-        "automationEnabled": true,
+        "automationEnabled": false,
         "directory": "/home/sazv/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
