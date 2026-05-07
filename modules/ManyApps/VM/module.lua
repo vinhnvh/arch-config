@@ -1,8 +1,10 @@
 local packages = {
-    "vm-curator",
-    "qemu-full",
-    "swtpm",
-    "libvirt",
+    "waydroid",
+    "lzip",
+    --"vm-curator",
+    --"qemu-full",
+    --"swtpm",
+    --"libvirt",
 
 
 }

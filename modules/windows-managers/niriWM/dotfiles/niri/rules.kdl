@@ -18,6 +18,13 @@ window-rule {
         blur true
     }
 }
+/-window-rule {
+    match app-id="Waydroid"
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 1.0; }
+
+}
+
 // Set the regular wallpaper on the backdrop.
 layer-rule {
   match namespace="^noctalia-wallpaper*"

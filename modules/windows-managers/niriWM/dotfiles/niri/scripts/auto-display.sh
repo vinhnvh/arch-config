@@ -1,43 +1,55 @@
 #!/bin/bash
 
 # --- CẤU HÌNH ---
-LAPTOP="eDP-1"
-LAPTOP2="eDP-2"
-# Script tự động tìm các cổng DP-1, DP-2, DP-3... bất kể bạn dùng Hybrid hay Discrete GPU
+LAPTOP_PATH="/sys/class/drm/card*-eDP-*/status"
 EXTERNAL_PATH="/sys/class/drm/card*-DP-*/status"
 
-# --- CHỐNG CHẠY ĐÈ (SINGLETON) ---
-# Nếu script đã chạy rồi thì bản mới sẽ tự thoát
+# --- SINGLETON ---
 LOCKFILE="/tmp/auto-display.lock"
 if [ -e ${LOCKFILE} ] && kill -0 $(cat ${LOCKFILE}) 2>/dev/null; then
     exit
 fi
 echo $$ > ${LOCKFILE}
+trap "rm -f ${LOCKFILE}" EXIT
+
+# --- Laptop_OUTPUTS ---
+set_laptop_outputs() {
+    for status_file in $LAPTOP_PATH; do
+        output=$(basename "$(dirname "$status_file")" | sed 's/card[0-9]*-//')
+        niri msg output "$output" "$1"
+    done
+}
 
 # --- LOGIC XỬ LÝ ---
 apply_logic() {
-    # Đợi một chút để Niri và phần cứng ổn định tín hiệu
-    sleep 0.7
-
-    # Kiểm tra trạng thái vật lý của tất cả các cổng DP
     if grep -q "^connected" $EXTERNAL_PATH 2>/dev/null; then
-        # Có màn hình rời -> Tắt màn hình laptop
-        niri msg output "$LAPTOP" off
-        niri msg output "$LAPTOP2" off
+        set_laptop_outputs off
     else
-        # Không có màn hình rời -> Bật màn hình laptop
-        niri msg output "$LAPTOP" on
-        niri msg output "$LAPTOP2" on
+        set_laptop_outputs on
     fi
 }
 
-# 1. Chạy kiểm tra ngay khi khởi động
+# --- Debounce ---
+DEBOUNCE_PID=""
+trigger_debounce() {
+    if [ -n "$DEBOUNCE_PID" ] && kill -0 "$DEBOUNCE_PID" 2>/dev/null; then
+        kill "$DEBOUNCE_PID"
+    fi
+    ( sleep 0.5; apply_logic ) &
+    DEBOUNCE_PID=$!
+}
+
+# --- Khởi động ---
 apply_logic
 
-# 2. LẮNG NGHE SỰ KIỆN (Không dùng vòng lặp polling)
-# Sử dụng Process Substitution (< <) để giảm thiểu số lượng tiến trình con
+# --- Xử lý Event ---
+STREAM_START=$(date +%s)
 while read -r line; do
     if echo "$line" | grep -q "Workspaces changed"; then
-        apply_logic
+        NOW=$(date +%s)
+        if [ $((NOW - STREAM_START)) -lt 1 ]; then
+            continue
+        fi
+        trigger_debounce
     fi
 done < <(niri msg event-stream)

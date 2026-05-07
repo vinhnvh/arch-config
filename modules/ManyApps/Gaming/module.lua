@@ -1,7 +1,7 @@
 local packages = {
     "equibop-git",
     "steam",
-    "lutris",
+    --"lutris",
     "heroic-games-launcher-bin",
     "protonplus",
     "gamemode",
