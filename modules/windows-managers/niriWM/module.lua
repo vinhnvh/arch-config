@@ -8,12 +8,6 @@ local packages = {
     "cmake",
     "git",
 
-    -- Default applications
-    "kitty",
-    "fastfetch",
-    "fish",
-    "starship",
-
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
 

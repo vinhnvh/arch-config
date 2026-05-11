@@ -1,36 +1,55 @@
 #!/bin/bash
 
 # --- CẤU HÌNH ---
-LAPTOP="eDP-1"
-LAPTOP2="eDP-2"
+LAPTOP_PATH="/sys/class/drm/card*-eDP-*/status"
 EXTERNAL_PATH="/sys/class/drm/card*-DP-*/status"
 
-# --- CHỐNG CHẠY ĐÈ (SINGLETON) ---
+# --- SINGLETON ---
 LOCKFILE="/tmp/auto-display.lock"
 if [ -e ${LOCKFILE} ] && kill -0 $(cat ${LOCKFILE}) 2>/dev/null; then
     exit
 fi
 echo $$ > ${LOCKFILE}
+trap "rm -f ${LOCKFILE}" EXIT
+
+# --- Laptop_OUTPUTS ---
+set_laptop_outputs() {
+    for status_file in $LAPTOP_PATH; do
+        output=$(basename "$(dirname "$status_file")" | sed 's/card[0-9]*-//')
+        wlr-randr --output "$output" --"$1"
+    done
+}
 
 # --- LOGIC XỬ LÝ ---
 apply_logic() {
-    sleep 0.7
     if grep -q "^connected" $EXTERNAL_PATH 2>/dev/null; then
-        hyprctl keyword monitor "$LAPTOP, disable"
-        hyprctl keyword monitor "$LAPTOP2, disable"
+        set_laptop_outputs off
     else
-         hyprctl keyword monitor "$LAPTOP, enable"
-        hyprctl keyword monitor "$LAPTOP2, enable"
+        set_laptop_outputs on
     fi
 }
 
-# 1. Chạy kiểm tra ngay khi khởi động
+# --- Debounce ---
+DEBOUNCE_PID=""
+trigger_debounce() {
+    if [ -n "$DEBOUNCE_PID" ] && kill -0 "$DEBOUNCE_PID" 2>/dev/null; then
+        kill "$DEBOUNCE_PID"
+    fi
+    ( sleep 0.5; apply_logic ) &
+    DEBOUNCE_PID=$!
+}
+
+# --- Khởi động ---
 apply_logic
 
-echo "Đã khởi động script giám sát màn hình cho Hyprland..."
-
-nc -U "$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock" | while read -r line; do
-    if echo "$line" | grep -qE "^(monitoradded|monitorremoved)>>"; then
-        apply_logic
+# --- Xử lý Event ---
+STREAM_START=$(date +%s)
+while read -r line; do
+    if echo "$line" | grep -q "HOTPLUG=1"; then
+        NOW=$(date +%s)
+        if [ $((NOW - STREAM_START)) -lt 1 ]; then
+            continue
+        fi
+        trigger_debounce
     fi
-done
+done < <(udevadm monitor --subsystem-match=drm --property)

@@ -6,6 +6,7 @@ local packages = {
     "protonplus",
     "gamemode",
     "rhythia-bin",
+    "tlauncher-installer",
 }
 
 return {

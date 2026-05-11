@@ -90,7 +90,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+T hotkey-overlay-title="Open a Popup-Terminal: kitty" { spawn "kitty" "--class" "kitty-popup"; }
     Mod+Z hotkey-overlay-title="Run an Application: zed" { spawn "zeditor"; }
-    Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave-origin-nightly" "--ozone-platform=x11"; }
+    Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave-origin-nightly" "--ozone-platform=wayland"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: nautilus" { spawn "nautilus"; }
     Mod+D hotkey-overlay-title="Run an Application: Yazi" { spawn "kitty" "yazi"; }
 

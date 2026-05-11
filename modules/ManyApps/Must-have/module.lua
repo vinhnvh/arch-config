@@ -3,6 +3,10 @@ local packages = {
     "brave-origin-nightly-bin",
     "yazi",
     "neovim",
+    "kitty",
+    "fastfetch",
+    "fish",
+    "starship",
 }
 
 return {

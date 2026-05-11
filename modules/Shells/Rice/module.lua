@@ -1,10 +1,24 @@
 local packages = {
     -- Ricing this shiet for my self) --
-    "eww-git",
-    -- Build dependencies for Niri and related tools
-    "cmake",
-    "git",
-
+    "aylurs-gtk-shell-git",
+    "libastal-git",
+    "libastal-4-git",
+    "libastal-wl-git",
+    "libastal-auth-git",
+    "libastal-cava-git",
+    "libastal-io-git",
+    "libastal-mpris-git",
+    "libastal-wireplumber-git",
+    "libastal-niri-git",
+    "libastal-powerprofiles-git",
+    "libastal-bluetooth-git",
+    "libastal-battery-git",
+    "libastal-network-git",
+    "libastal-notifd-git",
+    "libastal-tray-git",
+    "libastal-apps-git",
+    "libastal-gjs-git",
+    "dart-sass",
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
 }

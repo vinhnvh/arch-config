@@ -45,11 +45,23 @@ apply_logic
 # --- Xử lý Event ---
 STREAM_START=$(date +%s)
 while read -r line; do
-    if echo "$line" | grep -q "Workspaces changed"; then
+    if echo "$line" | grep -q "HOTPLUG=1"; then
         NOW=$(date +%s)
         if [ $((NOW - STREAM_START)) -lt 1 ]; then
             continue
         fi
         trigger_debounce
     fi
-done < <(niri msg event-stream)
+done < <(udevadm monitor --subsystem-match=drm --property)
+
+# --- Xử lý Event (niri) ---
+# STREAM_START=$(date +%s)
+# while read -r line; do
+#     if echo "$line" | grep -q "Workspaces changed"; then
+#         NOW=$(date +%s)
+#         if [ $((NOW - STREAM_START)) -lt 1 ]; then
+#             continue
+#         fi
+#         trigger_debounce
+#     fi
+# done < <(niri msg event-stream)

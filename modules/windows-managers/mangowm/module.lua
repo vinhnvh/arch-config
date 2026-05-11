@@ -20,7 +20,7 @@ local packages = {
 }
 
 return {
-    description = "Hyprland Wayland compositor with defaults",
+    description = "MangoWm Wayland compositor with defaults",
     conflicts = {},
     dotfiles_sync = true,
     packages = packages,
