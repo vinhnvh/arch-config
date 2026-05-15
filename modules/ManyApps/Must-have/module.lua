@@ -7,6 +7,8 @@ local packages = {
     "fastfetch",
     "fish",
     "starship",
+    -- Some programming languages
+    "rustup",
 }
 
 return {

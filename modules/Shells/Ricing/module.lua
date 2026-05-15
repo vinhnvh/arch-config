@@ -2,6 +2,7 @@ local packages = {
     -- Ricing this shiet for my self) --
     "waybar",
     "rofi",
+    "swaync",
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
 }

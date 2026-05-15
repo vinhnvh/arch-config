@@ -355,8 +355,8 @@
         "backgroundOpacity": 1,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
-        "displayMode": "auto_hide",
-        "dockType": "attached",
+        "displayMode": "exclusive",
+        "dockType": "floating",
         "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
@@ -377,7 +377,7 @@
         "pinnedApps": [
         ],
         "pinnedStatic": true,
-        "position": "top",
+        "position": "bottom",
         "showDockIndicator": true,
         "showLauncherIcon": true,
         "sitOnFrame": true,
@@ -727,7 +727,7 @@
         "settingsPanelMode": "centered",
         "settingsPanelSideBarCardStyle": true,
         "tooltipsEnabled": true,
-        "translucentWidgets": false
+        "translucentWidgets": true
     },
     "wallpaper": {
         "automationEnabled": false,
@@ -755,12 +755,12 @@
         "transitionDuration": 1000,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "fade",
             "disc",
             "stripes",
             "wipe",
             "pixelate",
-            "honeycomb"
+            "honeycomb",
+            "fade"
         ],
         "useOriginalImages": true,
         "useSolidColor": false,

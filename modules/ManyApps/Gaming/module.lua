@@ -1,12 +1,15 @@
 local packages = {
     "equibop-git",
     "steam",
+    "gamescope",
     --"lutris",
     "heroic-games-launcher-bin",
     "protonplus",
     "gamemode",
+    --Games--
     "rhythia-bin",
     "tlauncher-installer",
+    "osu-lazer-bin",
 }
 
 return {
