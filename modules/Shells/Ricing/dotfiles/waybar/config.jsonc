@@ -12,7 +12,10 @@
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  "modules-left": ["custom/spacer", "group/expand-2"],
+  "modules-left": [
+    "custom/spacer",
+    "custom/rofi",
+    "group/expand-2"],
   "modules-center": ["niri/workspaces"],
   "modules-right": [
     "group/expand",
@@ -23,6 +26,12 @@
     "custom/notification",
     "custom/spacer"
   ],
+
+  "custom/rofi": {
+      "format": "",
+      "on-click": "pkill -U $USER rofi || rofi -show drun",
+          "tooltip": false
+  },
 
   "upower": {
     "icon-size": 20,
@@ -61,7 +70,7 @@
   },
 
   "custom/menu": {
-    "format": "󰅃",
+    "format": "",
     "rotate": 0,
   },
 

@@ -109,13 +109,14 @@ binds {
     Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave-origin-nightly" "--ozone-platform=wayland"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: nautilus" { spawn "nautilus"; }
     Mod+D hotkey-overlay-title="Run an Application: Yazi" { spawn "kitty" "yazi"; }
-    Mod+A hotkey-overlay-title="Run an Application: Launcher" { spawn-sh "pkill rofi || rofi -show drun"; }
+    Mod+A hotkey-overlay-title="Run an Application: Launcher" { spawn-sh "pkill -U $USER rofi || rofi -show drun"; }
+    Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn-sh "pkill -U $USER waypaper || waypaper"; }
 
     //================================================NOCTALIA-SHELL================================================
     // Menu + Launcher
     Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     //Mod+A hotkey-overlay-title="Run the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
+    //Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 
     // Audio Management
     // XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }

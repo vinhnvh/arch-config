@@ -3,6 +3,8 @@ local packages = {
     "waybar",
     "rofi",
     "swaync",
+    "waypaper",
+    "swaybg",
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
 }

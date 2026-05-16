@@ -25,6 +25,10 @@ tooltip {
 
 
     }
+
+
+
+
 #workspaces{
 font-weight: normal;
 background: rgba(23, 23, 23, 0.0);
@@ -77,6 +81,7 @@ background: rgba(23, 23, 23, 0.0);
 }
 
 #taskbar button.active {
+    font-family: "Maple Mono NF CN";
     background: #C8C8C8;
     color: #C8C8C8;
     margin-left: 10px;
@@ -124,6 +129,13 @@ padding-top: 3px;
 opacity: 0.0;
 }
 
+#custom-menu{
+color: #cccedb;
+font-family: "Maple Mono NF CN";
+background:  rgba(23, 23, 23, 0.0);
+margin: 0px 0px 0px 0px;
+    opacity: 0.5
+}
 
 #custom-mouse{
 font-size: 14px;
@@ -139,6 +151,15 @@ background:  #161320;
     margin: 6px 0px 6px 0px;
     padding-left: 4px;
     padding-right: 4px;
+    }
+
+    #custom-rofi {
+        font-weight: normal;
+        font-size: 18px;
+        color: #cccedb;
+            background:  rgba(22, 19, 32, 0.0);
+            opacity: 1;
+            margin-left: -2px;
     }
 
 #backlight{
@@ -206,7 +227,7 @@ color: #cccedb;
 color: #cccedb;
 font-weight: normal;
 font-size: 19px;
-margin-left: -2px;
+margin-left: -4px;
 }
 
 #tray{
