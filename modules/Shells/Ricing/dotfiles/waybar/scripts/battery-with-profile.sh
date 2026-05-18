@@ -5,7 +5,51 @@
 # Công dụng: Quản lý chế độ nguồn (hiển thị + chuyển đổi)
 # ============================================
 
+# --- Môi trường cho notify-send trên Wayland ---
+export DISPLAY=:0
+export WAYLAND_DISPLAY=wayland-0
+
+# --- Biến chống spam ---
+LAST_NOTIFICATION_TIME=0
+NOTIFICATION_COOLDOWN=2  # seconds
+
+# ============================================
+# Hàm gửi thông báo có kiểm tra spam
+# ============================================
+send_power_notification() {
+    local next_mode="$1"
+    local current_time
+    current_time=$(date +%s)
+
+    # Kiểm tra nếu thời gian giữa 2 thông báo < cooldown thì bỏ qua
+    if (( current_time - LAST_NOTIFICATION_TIME < NOTIFICATION_COOLDOWN )); then
+        return 0
+    fi
+
+    LAST_NOTIFICATION_TIME=$current_time
+
+    # Map tên chế độ sang tiếng Việt hoặc định dạng đẹp hơn
+    local mode_name
+    case "$next_mode" in
+        "power-saver")  mode_name="Tiết kiệm điện" ;;
+        "balanced")     mode_name="Cân bằng" ;;
+        "performance")  mode_name="Hiệu suất cao" ;;
+        *)              mode_name="$next_mode" ;;
+    esac
+
+    # Gửi thông báo với synchronous để gộp các thông báo nhanh
+    notify-send -a "state" \
+        -i "power-profile" \
+        -h string:synchronous:power-profile \
+        -t 1000 \
+        "🔋 Chế độ nguồn" \
+        "Đã chuyển sang: $mode_name" \
+        2>/dev/null || true
+}
+
+# ============================================
 # Hàm: Chuyển đổi chế độ nguồn (cycle)
+# ============================================
 cycle_profile() {
     CURRENT=$(powerprofilesctl get)
     case "$CURRENT" in
@@ -22,11 +66,14 @@ cycle_profile() {
             NEXT="balanced"
             ;;
     esac
+
     powerprofilesctl set "$NEXT"
-    notify-send "🔋 Chế độ nguồn" "Đã chuyển sang: $NEXT" -t 1000 2>/dev/null || true
+    send_power_notification "$NEXT"
 }
 
+# ============================================
 # Hàm: Hiển thị thông tin pin (dành cho Waybar)
+# ============================================
 show_battery_info() {
     # Lấy thông tin pin
     BAT_PATH="/sys/class/power_supply/BAT0"
