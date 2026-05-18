@@ -4,7 +4,8 @@
 @define-color fg-muted #333333;
 @define-color danger #d65c40; /*clearallbutton*/
 @define-color danger-hover #c05138;
-@define-color positive #779762;
+@define-color positive #80cbc4;
+@define-color positive-hover #69b8b0;
 @define-color border #e2e2e2;
 
 * {
@@ -168,5 +169,5 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
-    background-color: #628050;
+    background-color: @positive-hover;
 }

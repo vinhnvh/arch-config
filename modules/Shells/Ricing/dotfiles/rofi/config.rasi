@@ -1,4 +1,10 @@
-@import "share"
-//@theme "theme"
+configuration {
+    modi:                "drun,emoji";
+    font:                "Maple Mono NF CN Bold 13";
+    show-icons:          true;
+    icon-theme:          "Papirus";
+    drun-display-format: "{name}";
+    emoji-display-format: "{emoji}";
+}
 
-@theme "/usr/share/rofi/themes/paper-float.rasi"
+@theme ".config/rofi/themes/sazv.rasi"

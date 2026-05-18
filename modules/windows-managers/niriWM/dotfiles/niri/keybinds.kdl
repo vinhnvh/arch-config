@@ -86,22 +86,6 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
-    // System Functions
-    // Audio Management
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "volume" "up"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "volume" "down"; }
-    XF86AudioMute        allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "volume" "mute"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "mic" "mute"; }
-
-    // // Media Controls
-    // XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
-    // XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "pause"; }
-    // XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
-    // XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
-
-    // Display & Brightness
-    XF86MonBrightnessUp allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "brightness" "up"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/scripts/notify-control.sh" "brightness" "down"; }
     //================================================APPS-LAUNCHER================================================
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+T hotkey-overlay-title="Open a Popup-Terminal: kitty" { spawn "kitty" "--class" "kitty-popup"; }
@@ -109,30 +93,8 @@ binds {
     Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave-origin-nightly" "--ozone-platform=wayland"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: nautilus" { spawn "nautilus"; }
     Mod+D hotkey-overlay-title="Run an Application: Yazi" { spawn "kitty" "yazi"; }
-    Mod+A hotkey-overlay-title="Run an Application: Launcher" { spawn-sh "pkill -U $USER rofi || rofi -show drun"; }
-    Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn-sh "pkill -U $USER waypaper || waypaper"; }
 
-    //================================================NOCTALIA-SHELL================================================
-    // Menu + Launcher
-    Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
-    //Mod+A hotkey-overlay-title="Run the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    //Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 
-    // Audio Management
-    // XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    // XF86AudioLowerVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    // XF86AudioMute        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
-    // XF86AudioMicMute     allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput"; }
-
-    // Media Controls
-    XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
-    XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "pause"; }
-    XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
-
-    // Display & Brightness
-    //XF86MonBrightnessUp allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    //XF86MonBrightnessDown allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
     //================================================EQUIBOP================================================
     Mod+MouseForward { spawn "equibop" "--toggle-mic"; }
@@ -149,4 +111,48 @@ binds {
     Mod+WheelScrollUp        { focus-column-left; }
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    //================================================SazV-SHELL================================================
+    // ----------Launcher Functions----------
+    Mod+A hotkey-overlay-title="Run an Application: Launcher" { spawn-sh "pkill -U $USER rofi || rofi -show drun"; }
+    Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn-sh "pkill -U $USER waypaper || waypaper"; }
+
+    // ----------System Functions----------
+    // Audio Management
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "volume" "up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "volume" "down"; }
+    XF86AudioMute        allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "volume" "mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "mic" "mute"; }
+
+    // // Media Controls
+    // XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
+    // XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "pause"; }
+    // XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
+    // XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
+
+    // Display & Brightness
+    XF86MonBrightnessUp allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "brightness" "up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/swaync/scripts/notify-control.sh" "brightness" "down"; }
+
+    //================================================NOCTALIA-SHELL================================================
+    // Menu + Launcher
+    //Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    //Mod+A hotkey-overlay-title="Run the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    //Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
+
+    // Audio Management
+    // XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    // XF86AudioLowerVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    // XF86AudioMute        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    // XF86AudioMicMute     allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput"; }
+
+    // Media Controls
+    //XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
+    //XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "pause"; }
+    //XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
+    //XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
+
+    // Display & Brightness
+    //XF86MonBrightnessUp allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    //XF86MonBrightnessDown allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 }

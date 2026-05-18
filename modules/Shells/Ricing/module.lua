@@ -2,6 +2,7 @@ local packages = {
     -- Ricing this shiet for my self) --
     "waybar",
     "rofi",
+    "rofi-emoji",
     "swaync",
     "waypaper",
     "swaybg",
