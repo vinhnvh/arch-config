@@ -21,3 +21,4 @@ function fish_greeting
     printf "    '---''(_/--'  `-'\\_)  \n"
     set_color normal
 end
+

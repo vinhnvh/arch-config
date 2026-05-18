@@ -136,7 +136,7 @@ binds {
 
     //================================================NOCTALIA-SHELL================================================
     // Menu + Launcher
-    //Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     //Mod+A hotkey-overlay-title="Run the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     //Mod+Shift+W hotkey-overlay-title="Run the Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 

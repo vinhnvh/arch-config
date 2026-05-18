@@ -85,7 +85,7 @@
 }
 
 .body {
-    color: @fg-muted;
+    color: @fg;
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1.4;

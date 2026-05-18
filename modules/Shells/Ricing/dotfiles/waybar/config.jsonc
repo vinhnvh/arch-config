@@ -22,10 +22,18 @@
     "network",
     "group/expand-3",
     "clock",
-    "upower",
+    // "upower",
+    "custom/battery",
     "custom/notification",
     "custom/spacer"
   ],
+  "custom/battery": {
+      "exec": "~/.config/arch-config/modules/Shells/Ricing/dotfiles/waybar/scripts/battery-with-profile.sh",
+      "interval": 5,
+      "on-click": "~/.config/arch-config/modules/Shells/Ricing/dotfiles/waybar/scripts/battery-with-profile.sh cycle",
+      "tooltip": true,
+      "return-type": "json"
+  },
 
   "custom/rofi": {
       "format": "",
@@ -33,13 +41,13 @@
           "tooltip": false
   },
 
-  "upower": {
-    "icon-size": 20,
-    "format": "",
-    "tooltip": true,
-    "rotate": 0,
-    "tooltip-spacing": 20,
-  },
+  // "upower": {
+  //   "icon-size": 20,
+  //   "format": "",
+  //   "tooltip": true,
+  //   "rotate": 0,
+  //   "tooltip-spacing": 20,
+  // },
 
   "group/expand-4": {
     "orientation": "horizontal",
@@ -168,6 +176,7 @@
     "format-disconnected": "",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 2,
+    "on-click-right": "kitty --class kitty-nmtui sudo nmtui",
   },
 
   "pulseaudio": {
@@ -177,6 +186,7 @@
     "format-muted": "婢",
     "tooltip-format": "{icon} {desc} // {volume}%",
     "scroll-step": 5,
+    // "on-click-right": "pavucontrol",
     "format-icons": {
       "headphone": "",
       "hands-free": "",

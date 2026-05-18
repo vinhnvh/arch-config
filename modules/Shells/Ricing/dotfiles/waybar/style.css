@@ -276,6 +276,13 @@ padding-bottom: 0px;
     color: red;
 }
 
-/*#custom-notification {
+#custom-notification {
   font-family: "Maple Mono NF CN";
-}*/
+  color: #cccedb;
+  margin-left: -2px;
+}
+#custom-battery {
+  font-family: "Maple Mono NF CN";
+  color: #cccedb;
+  margin-left: 2px;
+}

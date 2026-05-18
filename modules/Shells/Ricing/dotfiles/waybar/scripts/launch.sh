@@ -1,4 +1,4 @@
 #!/bin/fish
 
 pkill waybar
-waybar &
+env XDG_CONFIG_HOME=/home/sazv/.config waybar
