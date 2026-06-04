@@ -6,7 +6,6 @@ starship init fish | source
 set -gx EDITOR nvim
 end
 if status is-login
-    set -Ux GTK_IM_MODULE fcitx
     set -Ux QT_IM_MODULE fcitx
     set -Ux XMODIFIERS @im=fcitx
     set -Ux SDL_IM_MODULE fcitx

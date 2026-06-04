@@ -11,8 +11,9 @@ local packages = {
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
 
-    -- Mouse cursor themes
+    -- Themes
     "bibata-cursor-theme",
+    "morewaita-icon-theme",
 }
 
 return {

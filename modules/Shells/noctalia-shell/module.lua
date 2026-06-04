@@ -1,6 +1,6 @@
 local packages = {
     -- Noctalia quickshells for Niri(mb hypr or mangowc....) --
-    "noctalia-shell-git",
+    "noctalia-git",
     "cava",
     "matugen",
     "wlsunset",

@@ -24,7 +24,7 @@ layout {
 
     // Forcus-ring
     focus-ring {
-        // off
+        off
         width 3
         active-color "#7fc8ff"
         inactive-color "#505050"
@@ -32,7 +32,7 @@ layout {
 
     // Border-Similar to the focus ring, but always visible
     border {
-        off
+        // off
         width 3
         active-color "#ffc87f"
         inactive-color "#505050"
@@ -87,5 +87,5 @@ include "rules.kdl"
 include "spawns.kdl"
 include "inputs.kdl"
 include "outputs.kdl"
-include "theming.kdl"
 include "keybinds.kdl"
+include "./animations/burn-ashes.kdl"

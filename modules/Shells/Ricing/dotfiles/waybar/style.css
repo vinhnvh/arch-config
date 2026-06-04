@@ -7,34 +7,28 @@
 
 window#waybar {
     background: rgba(21, 21, 21, 0.83);
-/*background: transparent;*/
-  /*  border-radius: 15px; */
- /*  border: 2px solid #124323; */
-/* border: 0px solid #A1BDCE; */
- border: 3px solid rgba(255, 255, 255, 0.3);
- border-radius: 6px;
+    /*background: transparent;*/
+    /*  border-radius: 15px; */
+    /*  border: 2px solid #124323; */
+    /* border: 0px solid #A1BDCE; */
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
 }
 
-
 tooltip {
-        background: #1D2021;
-        color: #FBF1C7;
-        font-size: 13px;
-        border-radius: 7px;
-       border: 2px solid #101a24;
+    background: #1d2021;
+    color: #fbf1c7;
+    font-size: 13px;
+    border-radius: 7px;
+    border: 2px solid #101a24;
+}
 
-
-    }
-
-
-
-
-#workspaces{
-font-weight: normal;
-background: rgba(23, 23, 23, 0.0);
-    color: #2F302D;
+#workspaces {
+    font-weight: normal;
+    background: rgba(23, 23, 23, 0);
+    color: #2f302d;
     box-shadow: none;
-	text-shadow: none;
+    text-shadow: none;
     border-radius: 9px;
     transition: 0.2s ease;
     padding-left: 4px;
@@ -42,54 +36,49 @@ background: rgba(23, 23, 23, 0.0);
     padding-top: 1px;
 }
 
-
 #workspaces button {
-font-weight: normal;
-background: rgba(23, 23, 23, 0.0);
-    color: #B1B2BD;
+    font-weight: normal;
+    background: rgba(23, 23, 23, 0);
+    color: #b1b2bd;
     box-shadow: none;
-	text-shadow: none;
+    text-shadow: none;
     border-radius: 9px;
     transition: 0.2s ease;
     padding-left: 0px;
     padding-right: 4px;
     margin-right: 0px;
     margin-top: 0px;
- /*   animation: ws_normal 20s ease-in-out 1; */
+    /*   animation: ws_normal 20s ease-in-out 1; */
 }
 
-
-
 #workspaces button.active {
-
-
-  /* background-image: url("/home/anik/Documents/bar1.png");*/
+    /* background-image: url("/home/anik/Documents/bar1.png");*/
     color: #cccedb;
     font-weight: normal;
     transition: all 0.3s ease;
-      padding-left: 0px;
+    padding-left: 0px;
     padding-right: 4px;
-  /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
+    /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
 }
 
 #workspaces button:hover {
     background: none;
-    color: #7DAEA3;
+    color: #7daea3;
     font-weight: normal;
     animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active {
     font-family: "Maple Mono NF CN";
-    background: #C8C8C8;
-    color: #C8C8C8;
+    background: #c8c8c8;
+    color: #c8c8c8;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 0px;
     padding-right: 0px;
     animation: tb_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
     min-height: 3px;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -97,108 +86,103 @@ background: rgba(23, 23, 23, 0.0);
 }
 
 #taskbar button:hover {
-margin-top: 3px;
+    margin-top: 3px;
     margin-bottom: 3px;
-      margin-left: 10px;
+    margin-left: 10px;
     margin-right: 10px;
     padding-left: 0px;
     padding-right: 0px;
     min-height: 3px;
     border-radius: 3px;
     animation: tb_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #tray menu * {
     min-height: 16px;
     font-weight: bold;
     font-size: 13px;
-    color: #FBF1C7;
+    color: #000000;
 }
 
 #tray menu separator {
     min-height: 10px;
 }
 
-
-#custom-spacer{
-opacity: 0.0;
-padding-top: 3px;
+#custom-spacer {
+    opacity: 0;
+    padding-top: 3px;
 }
-#custom-smallspacer{
-opacity: 0.0;
-}
-
-#custom-menu{
-color: #cccedb;
-font-family: "Maple Mono NF CN";
-background:  rgba(23, 23, 23, 0.0);
-margin: 0px 0px 0px 0px;
-    opacity: 0.5
+#custom-smallspacer {
+    opacity: 0;
 }
 
-#custom-mouse{
-font-size: 14px;
-margin-bottom: 6px;
-background:  #161320;
+#custom-menu {
+    color: #cccedb;
+    font-family: "Maple Mono NF CN";
+    background: rgba(23, 23, 23, 0);
+    margin: 0px 0px 0px 0px;
+    opacity: 0.5;
 }
 
+#custom-mouse {
+    font-size: 14px;
+    margin-bottom: 6px;
+    background: #161320;
+}
 
-#custom-power{
+#custom-power {
     font-size: 15px;
-    color: #FFFFFF;
-    background:  rgba(22, 19, 32, 0.9);
+    color: #ffffff;
+    background: rgba(22, 19, 32, 0.9);
     margin: 6px 0px 6px 0px;
     padding-left: 4px;
     padding-right: 4px;
-    }
+}
 
-    #custom-rofi {
-        font-weight: normal;
-        font-size: 18px;
-        color: #cccedb;
-            background:  rgba(22, 19, 32, 0.0);
-            opacity: 1;
-            margin-left: -2px;
-    }
-
-#backlight{
+#custom-rofi {
+    font-weight: normal;
+    font-size: 18px;
     color: #cccedb;
-    background: rgba(23, 23, 23, 0.0);
+    background: rgba(22, 19, 32, 0);
+    opacity: 1;
+    margin-left: -2px;
+}
+
+#backlight {
+    color: #cccedb;
+    background: rgba(23, 23, 23, 0);
     font-weight: normal;
     font-size: 19px;
     margin: 0px 0px 0px -6px;
-
 }
 #bluetooth,
-#custom-cliphist{
-    color: #E6E7E7;
-    background:  #161320;
+#custom-cliphist {
+    color: #e6e7e7;
+    background: #161320;
     opacity: 1;
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
     padding-right: 4px;
-
 }
-#battery{
+#battery {
     font-weight: normal;
     font-size: 22px;
     color: #a6d189;
-    background:  rgba(23, 23, 23, 0.0);
+    background: rgba(23, 23, 23, 0);
     opacity: 1;
     margin: 0px 0px 0px 0px;
     padding-left: 0px;
     padding-right: 0px;
-
 }
 
-#clock{
+#clock {
     color: #cccedb;
     font-size: 15px;
     font-weight: 900;
     font-family: "Maple Mono NF CN";
-   /* font-family: "JetBrains Mono Nerd Font";*/
-    background: rgba(23, 23, 23, 0.0);
+    /* font-family: "JetBrains Mono Nerd Font";*/
+    background: rgba(23, 23, 23, 0);
     opacity: 1;
     margin: 3px -13px -3px -13px;
     padding-left: 10px;
@@ -206,13 +190,12 @@ background:  #161320;
     padding-top: 5px;
     padding-bottom: 3px;
     border: none;
-
 }
-#pulseaudio{
-font-weight: normal;
-font-size: 18px;
-color: #cccedb;
-    background:  rgba(22, 19, 32, 0.0);
+#pulseaudio {
+    font-weight: normal;
+    font-size: 18px;
+    color: #cccedb;
+    background: rgba(22, 19, 32, 0);
     opacity: 1;
     margin-left: -0px;
 }
@@ -220,69 +203,67 @@ color: #cccedb;
 @keyframes blink {
     to {
         color: #262827;
-
     }
 }
-#network{
-color: #cccedb;
-font-weight: normal;
-font-size: 19px;
-margin-left: -4px;
+#network {
+    color: #cccedb;
+    font-weight: normal;
+    font-size: 19px;
+    margin-left: -4px;
 }
 
-#tray{
-padding: 0px;
+#tray {
+    padding: 0px;
 }
 #upower#headset,
-#upower{
-color: #cccedb;
-/*margin: 8px 3px 3px 8px;*/
-margin: 8px;
-padding-top: 0px;
-padding-bottom: 0px;
+#upower {
+    color: #cccedb;
+    /*margin: 8px 3px 3px 8px;*/
+    margin: 8px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 #backlight-slider slider,
 #pulseaudio-slider slider {
-  background: #A1BDCE;
-  background-color: transparent;
-  box-shadow: none;
+    background: #a1bdce;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 #backlight-slider trough,
 #pulseaudio-slider trough {
-  min-width: 5px;
-  min-height: 80px;
-  border-radius: 8px;
-  background: #343434;
-  /*margin-bottom: -4px;
+    min-width: 5px;
+    min-height: 80px;
+    border-radius: 8px;
+    background: #343434;
+    /*margin-bottom: -4px;
   margin-left: -4px;
   margin-right: -4px;*/
 }
 
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
-  border-radius: 8px;
-  background-color: #2096C0;
+    border-radius: 8px;
+    background-color: #2096c0;
 }
 
-#battery.charging, #battery.plugged {
-	color: #E8EDF0;
-
+#battery.charging,
+#battery.plugged {
+    color: #e8edf0;
 }
-
 
 #battery.critical:not(.charging) {
     color: red;
 }
 
 #custom-notification {
-  font-family: "Maple Mono NF CN";
-  color: #cccedb;
-  margin-left: -2px;
+    font-family: "Maple Mono NF CN";
+    color: #cccedb;
+    margin-left: -2px;
 }
 #custom-battery {
-  font-family: "Maple Mono NF CN";
-  color: #cccedb;
-  margin-left: 2px;
+    font-family: "Maple Mono NF CN";
+    color: #cccedb;
+    margin-left: 2px;
 }

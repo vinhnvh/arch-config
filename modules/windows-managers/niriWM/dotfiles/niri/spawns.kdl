@@ -1,5 +1,5 @@
-//spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "sh" "-c" "exec /home/sazv/.config/niri/scripts/auto-display.sh"
-spawn-at-startup "sh" "-c" "exec $HOME/.config/niri/scripts/SazVShell.sh"
+//spawn-at-startup "sh" "-c" "exec $HOME/.config/niri/scripts/SazVShell.sh"

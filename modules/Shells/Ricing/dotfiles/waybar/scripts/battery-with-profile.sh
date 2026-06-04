@@ -41,7 +41,7 @@ send_power_notification() {
     notify-send -a "state" \
         -i "power-profile" \
         -h string:synchronous:power-profile \
-        -t 1000 \
+        -t 2000 \
         "🔋 Chế độ nguồn" \
         "Đã chuyển sang: $mode_name" \
         2>/dev/null || true
@@ -95,15 +95,15 @@ show_battery_info() {
     else
         # Dùng icon theo mốc năng lượng
         if [ "$CAPACITY" -ge 95 ]; then
-            ICON=""
+            ICON=" "
         elif [ "$CAPACITY" -ge 75 ]; then
-            ICON=""
+            ICON=" "
         elif [ "$CAPACITY" -ge 50 ]; then
-            ICON=""
+            ICON=" "
         elif [ "$CAPACITY" -ge 25 ]; then
-            ICON=""
+            ICON=" "
         else
-            ICON=""
+            ICON=" "
         fi
     fi
 

@@ -63,8 +63,8 @@
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
-        "marginHorizontal": 480,
-        "marginVertical": 4,
+        "marginHorizontal": 4,
+        "marginVertical": 48,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -73,7 +73,7 @@
         "mouseWheelAction": "workspace",
         "mouseWheelWrap": false,
         "outerCorners": true,
-        "position": "top",
+        "position": "left",
         "reverseScroll": false,
         "rightClickAction": "none",
         "rightClickCommand": "",
@@ -245,6 +245,14 @@
                         ]
                     },
                     "id": "plugin:mangowc-layout-switcher"
+                },
+                {
+                    "defaultSettings": {
+                        "animationsFolder": "~/.config/niri/animations",
+                        "iconColor": "none",
+                        "targetFile": "~/.config/niri/config.kdl"
+                    },
+                    "id": "plugin:niri-animation-picker"
                 }
             ]
         }
