@@ -1,22 +1,22 @@
 local packages = {
     -- Noctalia quickshells for Niri(mb hypr or mangowc....) --
     "noctalia-git",
-    "cava",
-    "matugen",
-    "wlsunset",
-    "cliphist",
-    "ddcutil",
-    "evolution-data-server",
-    "python",
-    "qt6-declarative",
-    "qt6-svg",
-    -- Music player plugin
-    "jq",
-    "yt-dlp",
-    "mpv",
-    -- Build dependencies for Niri and related tools
-    "cmake",
-    "git",
+    -- "cava",
+    -- "matugen",
+    -- "wlsunset",
+    -- "cliphist",
+    -- "ddcutil",
+    -- "evolution-data-server",
+    -- "python",
+    -- "qt6-declarative",
+    -- "qt6-svg",
+    -- -- Music player plugin
+    -- "jq",
+    -- "yt-dlp",
+    -- "mpv",
+    -- -- Build dependencies for Niri and related tools
+    -- "cmake",
+    -- "git",
 
     -- Fonts --
     "maple-mono-nf-cn-unhinted",
